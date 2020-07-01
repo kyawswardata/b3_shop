@@ -46,6 +46,8 @@
     <li>User Module
         <ol>
             <li>username</li>
+            <li>password</li>
+            <li>usertype</li>
             <li>email</li>
             <li>dob</li>
             <li>address</li>
