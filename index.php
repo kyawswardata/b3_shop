@@ -22,27 +22,27 @@ include_once('db/config.php');
 <div class="container">
     <div class="row">
         <?php while($row = mysqli_fetch_assoc($result)){
-                    ?>
-                       <div class="col-md-4">
-                        <div class="card">
-                        <img src="upload/<?php echo $row['item_image'];?>" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo $row['item_name'];?></h5>
-                            <p class="card-text"><?php echo $row['item_code'];?> <span class="badge badge-danger"><?php echo $row['item_price'];?></span></p>
-                            <div class="text-warning">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                            </div>
-                            <a href="#" class="btn btn-primary pull-right">More Info</a>
-                        </div>
-                        </div>
-                        </div>
-                    <?php
-                    }
-                    ?>
+        ?>
+            <div class="col-md-4">
+            <div class="card">
+            <img src="upload/<?php echo $row['item_image'];?>" class="mb-3" alt="" style="height:200px;">
+            <div class="card-body">
+                <h5 class="card-title"><?php echo $row['item_name'];?></h5>
+                <p class="card-text"><?php echo $row['item_code'];?> <span class="badge badge-danger"><?php echo $row['item_price'];?></span></p>
+                <div class="text-warning">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <a href="detail.php?id=<?php echo $row['id'];?>" class="btn btn-primary pull-right">More Info</a>
+            </div>
+            </div>
+            </div>
+        <?php
+        }
+        ?>
 
     </div>
 </div>

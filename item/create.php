@@ -9,8 +9,6 @@
 
     if($_SERVER['REQUEST_METHOD'] == 'POST')
     {
-
-
         $targetPath = "upload/".$_FILES["item_image"]["name"];
       
         move_uploaded_file($_FILES["item_image"]["tmp_name"],$targetPath);

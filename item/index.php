@@ -4,6 +4,7 @@
     if(!isset($_SESSION["id"])) {
         header("Location:../index.php");
     }
+    
     $sql = "SELECT items.*,categories.category_name FROM items INNER JOIN categories ON items.category_id = categories.id";
     // echo $sql; exit();
     $result = mysqli_query($con,$sql);
@@ -47,7 +48,7 @@
                             <td><?php echo $row['item_code'];?></td>
                             <td><?php echo $row['item_price'];?></td>
                             <td>
-                                <img src="upload/<?php echo $row['item_image'];?>" width="100px" alt="">
+                                <img src="../upload/<?php echo $row['item_image'];?>" width="100px" alt="">
                             </td>
                             <!-- <td><?php echo $row['item_description'];?></td> -->
                             <td><?php echo $row['category_name'];?></td>
